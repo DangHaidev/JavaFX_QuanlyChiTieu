@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaproject.expense_management.Controller">
+  <children>
+    <AnchorPane prefHeight="527.0" prefWidth="303.0" styleClass="gradient" stylesheets="@style.css">
+      <children>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="77.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image></ImageView>
+        <Label layoutX="57.0" layoutY="233.0" prefHeight="34.0" prefWidth="205.0" text="WELCOME BACK!!!" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font></Label>
+        <Button layoutX="76.0" layoutY="450.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="150.0" styleClass="login-btn" stylesheets="@style.css" text="Login">
+               <font>
+                  <Font size="21.0" />
+               </font></Button>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="43.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nếu bạn có tài khoản hãy đăng nhập để quản lý chi tiêu của chính bạn!!" textAlignment="CENTER" wrappingWidth="218.79296875" />
+      </children>
+    </AnchorPane>
+    <AnchorPane prefHeight="534.0" prefWidth="522.0" stylesheets="@style.css">
+      <children>
+        <Label layoutX="155.0" layoutY="53.0" text="CREATE ACCOUNT" textFill="#01bfac">
+               <font>
+                  <Font size="27.0" />
+               </font></Label>
+        <TextField fx:id="su_email" layoutX="104.0" layoutY="210.0" prefHeight="45.0" prefWidth="325.0" promptText="Your email. . ." styleClass="raddius" stylesheets="@style.css" />
+        <PasswordField fx:id="su_pass" layoutX="104.0" layoutY="267.0" prefHeight="45.0" prefWidth="325.0" promptText="Password. . ." styleClass="raddius" stylesheets="@style.css" />
+        <Button fx:id="su_btn" layoutX="189.0" layoutY="445.0" mnemonicParsing="false" onAction="#regBtn" prefHeight="45.0" prefWidth="150.0" styleClass="sign-up-btn" stylesheets="@style.css" text="Sign Up" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font></Button>
+        <Label layoutX="152.0" layoutY="162.0" text="or use your github for register" />
+        <ImageView fitHeight="39.0" fitWidth="41.0" layoutX="244.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@git.jpg" />
+               </image></ImageView>
+            <ComboBox fx:id="comboBox" layoutX="104.0" layoutY="323.0" onAction="#comboxChance" prefHeight="39.0" prefWidth="325.0" promptText="Question" styleClass="questionchoice" stylesheets="@style.css" />
+            <TextField fx:id="su_answer" layoutX="104.0" layoutY="375.0" prefHeight="45.0" prefWidth="325.0" promptText="Your answer. . . " styleClass="raddius" stylesheets="@style.css" />
+      </children>
+    </AnchorPane>
+  </children>
+</HBox>

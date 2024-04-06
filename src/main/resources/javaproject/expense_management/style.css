@@ -1,0 +1,40 @@
+
+
+.gradient {
+    -fx-background-color: linear-gradient(to bottom right, #3aada3,#0e7296);
+}
+.white-form {
+    -fx-background-color: #fff;
+}
+.sign-up-btn {
+    -fx-background-color: linear-gradient(to bottom right, #3aada3,#0e7296);
+    -fx-text-fill: #fff;
+    -fx-fill-height: 5px;
+    -fx-background-radius: 10px;
+}
+.sign-up-btn:hover {
+    -fx-background-color: linear-gradient(to bottom right, #45ea5b,#077c17);
+}
+.login-btn {
+    -fx-background-color: #f000;
+    -fx-text-fill: #fff;
+    -fx-fill-height: 5px;
+    -fx-border-color:#fff ;
+    -fx-border-radius: 10px;
+}
+.login-btn:hover {
+    -fx-background-color: linear-gradient(to bottom right, #45ea5b,#077c17);
+}
+.raddius{
+    -fx-background-radius: 10px;
+}
+.forgotpass{
+}
+.forgotpass:hover {
+    -fx-text-fill: red;
+}
+.questionchoice{
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-radius: 10px;
+}
