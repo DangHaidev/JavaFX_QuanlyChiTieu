@@ -3,9 +3,13 @@ package javaproject.expense_management;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -62,6 +66,8 @@ public class Controller implements Initializable {
     private PasswordField newPassword;
     @FXML
     private PasswordField confirmPass;
+    @FXML
+    private Button sign_in;
 
     @Override
     public void initialize(URL location, ResourceBundle resource)
@@ -133,6 +139,16 @@ public class Controller implements Initializable {
                      alert.setHeaderText(null);
                      alert.setContentText("Success!");
                      alert.showAndWait();
+
+                     Parent root = FXMLLoader.load(Main.class.getResource("test.fxml"));
+                     Stage stage = new Stage();
+                     Scene scene = new Scene(root,1120,700);
+                     stage.setTitle("Program");
+                     stage.setScene(scene);
+                     stage.show();
+
+                     sign_in.getScene().getWindow().hide();
+
                  } else // if not, error message
                  {
                      alert = new Alert(Alert.AlertType.ERROR);
@@ -221,11 +237,25 @@ public class Controller implements Initializable {
                             "', date = '" + date +
                             "' WHERE email = '" + fg_email.getText() + "'";
 
+                    prepare = connect.prepareStatement(updatePass);
+                    prepare.executeUpdate();
+
                     alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("message!");
                     alert.setHeaderText(null);
-                    alert.setContentText("Success!!");
+                    alert.setContentText("Success change password!!");
                     alert.showAndWait();
+
+
+                    newPass.setVisible(false);
+                    forgotform.setVisible(false);
+                    login.setVisible(true);
+                    // clear fields
+                    newPassword.setText("");
+                    confirmPass.setText("");
+                    comboBox2.getSelectionModel().clearSelection();
+                    fg_email.setText("");
+                    fg_answer.setText("");
 
                 } catch (Exception e) {
                     e.printStackTrace();

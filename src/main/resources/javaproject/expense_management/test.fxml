@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1120.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaproject.expense_management.Controller2">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane prefHeight="700.0" prefWidth="1120.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane prefHeight="700.0" prefWidth="239.0" styleClass="gradient" stylesheets="@mainFormCss.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="700.0" prefWidth="239.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="69.0" layoutY="104.0" text="Label" />
+                              <Label layoutX="123.0" layoutY="104.0" text="Label" />
+                              <Button layoutX="20.0" layoutY="322.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="206.0" styleClass="nav-btn" stylesheets="@mainFormCss.css" text="TRANG CHỦ">
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@home.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                              <Button layoutX="20.0" layoutY="386.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="206.0" styleClass="nav-btn" stylesheets="@mainFormCss.css" text="THU CHI" />
+                              <Button layoutX="20.0" layoutY="442.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="206.0" styleClass="nav-btn" stylesheets="@mainFormCss.css" text="THÔNG KÊ">
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@pie-chart.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                              <Button layoutX="20.0" layoutY="511.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="206.0" styleClass="nav-btn" stylesheets="@mainFormCss.css" text="DANH MỤC" />
+                              <Button layoutX="14.0" layoutY="640.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="36.0" styleClass="nav-btn" stylesheets="@mainFormCss.css" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="14.0">
+                                 <graphic>
+                                    <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@logout.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                              <Label layoutX="57.0" layoutY="646.0" text="Thoát" textFill="WHITE" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="57.0" />
+                              <AnchorPane prefHeight="88.0" prefWidth="240.0" styleClass="header" stylesheets="@mainFormCss.css">
+                                 <children>
+                                    <Label layoutX="15.0" layoutY="15.0" prefHeight="54.0" prefWidth="218.0" text="Quản Lý Chi Tiêu" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Comic Sans MS Bold" size="26.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <ImageView fx:id="imageAva" fitHeight="110.0" fitWidth="110.0" layoutX="65.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button layoutX="93.0" layoutY="258.0" mnemonicParsing="false" onAction="#chanceAvatar" prefHeight="33.0" prefWidth="36.0" text="Button" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="700.0" prefWidth="880.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="879.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ScrollPane prefHeight="200.0" prefWidth="878.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="1270.0">
+                                             <children>
+                                                <AnchorPane layoutX="21.0" layoutY="16.0" prefHeight="152.0" prefWidth="271.0" styleClass="gradient" stylesheets="@mainFormCss.css" />
+                                                <AnchorPane layoutX="312.0" layoutY="16.0" prefHeight="152.0" prefWidth="271.0" styleClass="gradient" stylesheets="@mainFormCss.css" />
+                                                <AnchorPane layoutX="914.0" layoutY="16.0" prefHeight="152.0" prefWidth="271.0" styleClass="gradient" stylesheets="@mainFormCss.css" />
+                                                <AnchorPane layoutX="610.0" layoutY="16.0" prefHeight="152.0" prefWidth="271.0" styleClass="gradient" stylesheets="@mainFormCss.css" />
+                                             </children></AnchorPane>
+                                      </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutY="215.0" prefHeight="486.0" prefWidth="878.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="214.0">
+                                 <children>
+                                    <AnchorPane prefHeight="486.0" prefWidth="481.0" styleClass="white-form" stylesheets="@mainFormCss.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <StackedBarChart prefHeight="486.0" prefWidth="507.0" title="Thu Chi" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </StackedBarChart>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="522.0" prefHeight="481.0" prefWidth="398.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                                       <children>
+                                          <LineChart prefHeight="481.0" prefWidth="500.0" title="Số dư tích lũy" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <xAxis>
+                                              <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                          </LineChart>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="700.0" prefWidth="880.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TableView fx:id="daily_tableview" layoutX="11.0" layoutY="23.0" prefHeight="602.0" prefWidth="859.0" stylesheets="@mainFormCss.css" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="23.0">
+                                <columns>
+                                  <TableColumn fx:id="col_type" prefWidth="117.0" text="Loại" />
+                                  <TableColumn fx:id="col_typeTC" prefWidth="169.0" text="Thể loại" />
+                                    <TableColumn fx:id="col_Sotien" prefWidth="111.0" text="Số tiền" />
+                                    <TableColumn fx:id="col_account" prefWidth="151.0" text="Tài khoản" />
+                                    <TableColumn fx:id="col_note" prefWidth="168.0" text="Ghi chú" />
+                                    <TableColumn fx:id="col_date" prefWidth="141.0" text="Thời gian" />
+                                </columns>
+                              </TableView>
+                              <Button layoutX="743.0" layoutY="639.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="96.0" styleClass="gradient" stylesheets="@mainFormCss.css" text="Xóa" />
+                              <Button layoutX="617.0" layoutY="639.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="96.0" styleClass="gradient" stylesheets="@mainFormCss.css" text="Sửa" />
+                              <Button fx:id="thuchiBtn" layoutX="328.0" layoutY="639.0" mnemonicParsing="false" onAction="#ThemThuChi" prefHeight="39.0" prefWidth="166.0" styleClass="gradient" stylesheets="@mainFormCss.css" text="Thu / Chi" />
+                           </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

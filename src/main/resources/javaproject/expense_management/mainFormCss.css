@@ -1,0 +1,53 @@
+.gradient {
+    -fx-background-color: linear-gradient(to bottom right, #00AFB9,#0081A7);
+}.header {
+     -fx-background-color: #0e7296;
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-color: #fff;
+ }
+
+ .nav-btn {
+     -fx-background-color: transprent;
+     -fx-border-color: white;
+     -fx-border-radius: 5px;
+     -fx-text-fill: white;
+     -fx-font-family: Arial;
+     /*-fx-alignment: left;*/
+ }
+
+.nav-btn:hover {
+    -fx-background-color: white ;
+    -fx-text-fill:#0081A7 ;
+}
+
+.white-form {
+    -fx-background-color: #e27979;
+}
+.white {
+    -fx-background-color: #fff;
+}
+.radius {
+    -fx-background-radius: 10px;
+}
+.table-view {
+    -fx-background-color: transprent;
+    -fx-padding: 0;
+    -fx-border-radius: 10px;
+    -fx-border-color: linear-gradient(to bottom right, #00AFB9,#0081A7) ;
+
+}
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom right, #00AFB9,#0081A7);
+    -fx-background-insets: 0 0 0 0;
+    -fx-border-radius: 10px 10px 0 0;
+
+}
+.table-view .column-header, .filter {
+    -fx-background-color: transprent;
+    -fx-text-fill: white;
+    -fx-border-radius: 10px 10px 0 0;
+}
+.table-view .column-header, .label {
+   -fx-size : 40px;
+    -fx-text-fill: white;
+}

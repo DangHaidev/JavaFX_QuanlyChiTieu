@@ -9,10 +9,10 @@
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaproject.expense_management.Controller">
    <children>
-      <AnchorPane fx:id="su_form" prefHeight="200.0" prefWidth="200.0">
+      <AnchorPane fx:id="su_form" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="823.0">
          <children>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" />
-            <AnchorPane layoutY="5.0" prefHeight="534.0" prefWidth="303.0" styleClass="gradient" stylesheets="@style.css">
+            <AnchorPane layoutY="5.0" prefHeight="534.0" prefWidth="303.0" styleClass="gradient" stylesheets="@style.css" AnchorPane.topAnchor="0.0">
                <children>
                   <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="77.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -29,7 +29,7 @@
                         <Font size="21.0" />
                      </font>
                   </Button>
-                  <Text fill="WHITE" fontSmoothingType="LCD" layoutX="43.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nếu bạn có tài khoản hãy đăng nhập để quản lý chi tiêu của chính bạn!!" textAlignment="CENTER" wrappingWidth="218.79296875" />
+                  <Text fill="WHITE" fontSmoothingType="LCD" layoutX="43.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nếu bạn có tài khoản hãy đăng nhập để quản lý chi tiêu của chính bạn!!" textAlignment="CENTER" wrappingWidth="218.79296875" AnchorPane.topAnchor="300.576171875" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="303.0" layoutY="5.0" prefHeight="539.0" prefWidth="522.0" stylesheets="@style.css">
@@ -46,7 +46,7 @@
                         <Font size="21.0" />
                      </font>
                   </Button>
-                  <Label layoutX="152.0" layoutY="162.0" text="or use your github for register" />
+                  <Label layoutX="189.0" layoutY="161.0" text="or use your github for register" />
                   <ImageView fitHeight="39.0" fitWidth="41.0" layoutX="244.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@git.jpg" />
@@ -58,7 +58,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="login_form" prefHeight="200.0" prefWidth="200.0" visible="false">
+      <AnchorPane fx:id="login_form" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="823.0" visible="false">
          <children>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" />
             <AnchorPane layoutX="498.0" prefHeight="539.0" prefWidth="325.0" styleClass="gradient" stylesheets="@style.css">

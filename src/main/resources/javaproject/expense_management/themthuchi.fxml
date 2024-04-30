@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="javaproject.expense_management.Controller3">
+   <children>
+      <AnchorPane prefHeight="650.0" prefWidth="550.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="54.0" layoutY="96.0" prefHeight="35.0" prefWidth="170.0" text="Loại giao dịch: ">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="in4_type" layoutX="246.0" layoutY="94.0" opacity="0.75" prefHeight="39.0" prefWidth="210.0" promptText="lựa chọn..." />
+            <ComboBox fx:id="in4_typeTC" layoutX="246.0" layoutY="163.0" opacity="0.75" prefHeight="39.0" prefWidth="210.0" promptText="lựa chọn..." />
+            <Label layoutX="54.0" layoutY="165.0" prefHeight="35.0" prefWidth="170.0" text="Thể loại :">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="in4_account" layoutX="246.0" layoutY="239.0" opacity="0.75" prefHeight="39.0" prefWidth="210.0" promptText="lựa chọn..." />
+            <Label layoutX="54.0" layoutY="241.0" prefHeight="35.0" prefWidth="170.0" text="Tài khoản :">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="324.0" prefHeight="35.0" prefWidth="170.0" text="Số tiền : ">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="in4_price" layoutX="239.0" layoutY="322.0" promptText="Số tiền. . ." stylesheets="@mainFormCss.css" />
+            <Label layoutX="54.0" layoutY="486.0" prefHeight="35.0" prefWidth="153.0" text="Ghi chú : ">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="in4_note" layoutX="220.0" layoutY="440.0" prefHeight="115.0" prefWidth="262.0" promptText="ghi chú. . ." stylesheets="@mainFormCss.css" />
+            <Button fx:id="in4_save" layoutX="148.0" layoutY="597.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="255.0" styleClass="gradient" stylesheets="@mainFormCss.css" text="Lưu " />
+            <Label layoutX="54.0" layoutY="383.0" prefHeight="35.0" prefWidth="170.0" text="Thời gian :">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="221.0" layoutY="20.0" prefHeight="35.0" prefWidth="109.0" text="Thông tin">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="450.0" layoutY="550.0">
+               <children>
+                  <ImageView fitHeight="134.0" fitWidth="127.0" layoutX="-29.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@financial-profit.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <DatePicker fx:id="in4_time" layoutX="232.0" layoutY="381.0" prefHeight="39.0" prefWidth="246.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
