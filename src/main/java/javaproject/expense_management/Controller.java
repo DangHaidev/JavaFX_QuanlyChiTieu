@@ -129,7 +129,6 @@ public class Controller implements Initializable {
                  prepare = connect.prepareStatement(selectData);
                  prepare.setString(1,si_email.getText());
                  prepare.setString(2,si_pass.getText());
-
                  result = prepare.executeQuery();
             // if success, proceed to another form
                  if(result.next())
