@@ -1,6 +1,8 @@
 package javaproject.expense_management;
 
+import javafx.application.Platform;
 import javafx.beans.Observable;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -8,10 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -22,8 +21,10 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.Objects;
 import java.util.ResourceBundle;
+
 
 public class Controller2 implements Initializable {
     @FXML
@@ -58,10 +59,20 @@ public class Controller2 implements Initializable {
     private ImageView imageAva;
     private Image image;
 
+    @FXML
+    private Button deleteButton;
+
+    @FXML
+    private TextField test_Tien;
+    @FXML
+    private TextField test_Note;
+    @FXML
+    private Label date_time;
+
     public ObservableList<DailyData> addDailyData() {
         ObservableList<DailyData> listData = FXCollections.observableArrayList();
 
-        String selectData = "SELECT * FROM daily";
+        String selectData = "SELECT * FROM daily1";
         connection = Database.connecDB();
 
         DailyData dData;
@@ -73,8 +84,8 @@ public class Controller2 implements Initializable {
             {
 //                DailyData(String dailyID, String Type, String LoaiTC, int SoTien, String TaiKhoan,String Note , Date
 //                date)
-                dData = new DailyData(result.getString("daily_ID"),result.getString("Loai"),result.getString("TheLoai"),
-                        result.getInt("SoTien"),result.getString("TaiKhoan"),
+                dData = new DailyData(result.getString("id"),result.getString("Loai"),result.getString("TheLoai"),
+                        result.getString("SoTien"),result.getString("TaiKhoan"),
                         result.getString("Note"),result.getDate("Time"));
 
                 listData.add(dData);
@@ -82,7 +93,7 @@ public class Controller2 implements Initializable {
         } catch (Exception e){
             e.printStackTrace();
         }
-    return listData;
+        return listData;
     }
 
     private ObservableList<DailyData> addDailyListData;
@@ -106,6 +117,7 @@ public class Controller2 implements Initializable {
             stage.setTitle("thu chi");
             stage.setScene(scene);
             stage.show();
+//            addDailyDisplayData();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -122,8 +134,95 @@ public class Controller2 implements Initializable {
             imageAva.setImage(image);
         }
     }
+    public void DeleteRecord() {
+        String deleteData = "DELETE FROM daily1 WHERE Note = '"
+                + test_Note.getText() + "'" + "AND SoTien = '" + test_Tien.getText() + "'";
+        connection = Database.connecDB();
+        try {
+            statement = connection.createStatement();
+            statement.executeUpdate(deleteData);
+
+            String checkData = "SELECT Note FROM daily1 "
+                    + "WHERE Note = '" + test_Tien.getText()
+                    +  "'";
+
+            prepare = connection.prepareStatement(checkData);
+            result = prepare.executeQuery();
+
+            //
+            if (result.next()) {
+                String deleteGrade = "DELETE FROM daily1 WHERE "
+                        + "Note = '" + test_Tien.getText() + "'";
+
+                statement = connection.createStatement();
+                statement.executeUpdate(deleteGrade);
+
+            }//
+
+            alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Information Message");
+            alert.setHeaderText(null);
+            alert.setContentText("Xóa thành công!");
+            alert.showAndWait();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void test()
+    {
+        DailyData test = daily_tableview.getSelectionModel().getSelectedItem();
+        int num = daily_tableview.getSelectionModel().getSelectedIndex();
+        if ((num - 1) < -1) {
+            return;
+        }
+        test_Note.setText(test.getNote());
+        test_Tien.setText(test.getSoTien());
+    }
+
+        public void editThuChi() throws IOException {
+        DailyData dData = daily_tableview.getSelectionModel().getSelectedItem();
+        int num = daily_tableview.getSelectionModel().getSelectedIndex();
+        if ((num - 1) < -1) {
+            alert.setTitle("Hãy chọn một dòng!");
+        }
+        DailyData.temp_Type = dData.getType();
+        DailyData.temp_LoaiThuChi = dData.getLoaiThuChi();
+        DailyData.temp_SoTien = dData.getSoTien();
+        DailyData.temp_TaiKhoan = dData.getTaiKhoan();
+        DailyData.temp_Note = dData.getNote();
+        DailyData.temp_date = dData.getDate();
+
+        Parent root3 = FXMLLoader.load(Main.class.getResource("editThuChi.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root3,550,650);
+        stage.setTitle("Edit form");
+        stage.setScene(scene);
+        stage.show();
+    }
+//    public void runTime() {
+//        new Thread() {
+//            public void run() {
+//                SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy hh:mm:ss a");
+//                while (true) {
+//                    try {
+//                        Thread.sleep(1000);
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+//                    Platform.runLater(() -> {
+//                        date_time.setText(format.format(new Date()));
+//                    });
+//                }
+//            }
+//        }.start();
+//    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         addDailyDisplayData();
+//        deleteButton.setOnAction(e -> {
+//            DailyData selectItem =  daily_tableview.getSelectionModel().getSelectedItem();
+//            daily_tableview.getItems().remove(selectItem);
+//        });
     }
 }

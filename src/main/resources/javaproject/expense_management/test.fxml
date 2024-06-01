@@ -38,7 +38,6 @@
                                        </image>
                                     </ImageView>
                                  </graphic></Button>
-                              <Button layoutX="20.0" layoutY="511.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="206.0" styleClass="nav-btn" stylesheets="@mainFormCss.css" text="DANH MỤC" />
                               <Button layoutX="14.0" layoutY="640.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="36.0" styleClass="nav-btn" stylesheets="@mainFormCss.css" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="14.0">
                                  <graphic>
                                     <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
@@ -59,6 +58,7 @@
                               </AnchorPane>
                               <ImageView fx:id="imageAva" fitHeight="110.0" fitWidth="110.0" layoutX="65.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" />
                               <Button layoutX="93.0" layoutY="258.0" mnemonicParsing="false" onAction="#chanceAvatar" prefHeight="33.0" prefWidth="36.0" text="Button" />
+                              <Label fx:id="date_time" layoutX="58.0" layoutY="582.0" prefHeight="30.0" prefWidth="124.0" text="MM:DD:YYYY" />
                            </children>
                         </AnchorPane>
                      </children>
@@ -116,7 +116,7 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="700.0" prefWidth="880.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <TableView fx:id="daily_tableview" layoutX="11.0" layoutY="23.0" prefHeight="602.0" prefWidth="859.0" stylesheets="@mainFormCss.css" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="23.0">
+                              <TableView fx:id="daily_tableview" layoutX="11.0" layoutY="63.0" onMouseClicked="#test" prefHeight="562.0" prefWidth="859.0" stylesheets="@mainFormCss.css" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="63.0">
                                 <columns>
                                   <TableColumn fx:id="col_type" prefWidth="117.0" text="Loại" />
                                   <TableColumn fx:id="col_typeTC" prefWidth="169.0" text="Thể loại" />
@@ -126,9 +126,12 @@
                                     <TableColumn fx:id="col_date" prefWidth="141.0" text="Thời gian" />
                                 </columns>
                               </TableView>
-                              <Button layoutX="743.0" layoutY="639.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="96.0" styleClass="gradient" stylesheets="@mainFormCss.css" text="Xóa" />
-                              <Button layoutX="617.0" layoutY="639.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="96.0" styleClass="gradient" stylesheets="@mainFormCss.css" text="Sửa" />
+                              <Button fx:id="deleteButton" layoutX="743.0" layoutY="639.0" mnemonicParsing="false" onAction="#DeleteRecord" prefHeight="39.0" prefWidth="96.0" styleClass="gradient" stylesheets="@mainFormCss.css" text="Xóa" />
+                              <Button layoutX="617.0" layoutY="639.0" mnemonicParsing="false" onAction="#editThuChi" prefHeight="39.0" prefWidth="96.0" styleClass="gradient" stylesheets="@mainFormCss.css" text="Sửa" />
                               <Button fx:id="thuchiBtn" layoutX="328.0" layoutY="639.0" mnemonicParsing="false" onAction="#ThemThuChi" prefHeight="39.0" prefWidth="166.0" styleClass="gradient" stylesheets="@mainFormCss.css" text="Thu / Chi" />
+                              <TextField fx:id="test_Tien" layoutX="39.0" layoutY="639.0" prefHeight="39.0" prefWidth="58.0" visible="false" />
+                              <TextField fx:id="test_Note" layoutX="124.0" layoutY="639.0" prefHeight="39.0" prefWidth="58.0" visible="false" />
+                              <Button layoutX="212.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#addDailyDisplayData" prefHeight="39.0" prefWidth="99.0" text="Refresh" />
                            </children></AnchorPane>
                      </children>
                   </AnchorPane>
