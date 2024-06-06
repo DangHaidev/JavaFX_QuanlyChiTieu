@@ -56,8 +56,8 @@ public class Controller3 implements Initializable {
         else {
 
             try {
-                String insertData = "INSERT INTO daily1 (Loai,TheLoai,SoTien,TaiKhoan,Note,Time)"
-                        + "VALUES (?,?,?,?,?,?)";
+                String insertData = "INSERT INTO daily1 (Loai,TheLoai,SoTien,TaiKhoan,Note,Time,email)"
+                        + "VALUES (?,?,?,?,?,?,?)";
 
                 connection = Database.connecDB();
                 prepare = connection.prepareStatement(insertData);
@@ -70,6 +70,7 @@ public class Controller3 implements Initializable {
                         java.util.Date.from(in4_time.getValue().atStartOfDay(ZoneId.systemDefault()).toInstant());
                 java.sql.Date sqlDate = new java.sql.Date(date.getTime());
                 prepare.setString(6,String.valueOf(sqlDate));
+                prepare.setString(7, ListData.temp_user);
                 prepare.executeUpdate();
                 alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("message!");

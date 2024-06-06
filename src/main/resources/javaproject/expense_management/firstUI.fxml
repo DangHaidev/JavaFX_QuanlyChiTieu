@@ -16,15 +16,15 @@
                <children>
                   <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="77.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@logo.png" />
+                        <Image url="@image/logo.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="57.0" layoutY="233.0" prefHeight="34.0" prefWidth="205.0" text="WELCOME BACK!!!" textFill="WHITE">
+                  <Label layoutX="20.0" layoutY="220.0" prefHeight="47.0" prefWidth="269.0" text="Chào mừng quay trở lại!!" textFill="WHITE">
                      <font>
                         <Font size="23.0" />
                      </font>
                   </Label>
-                  <Button fx:id="login_in_su_form" layoutX="76.0" layoutY="450.0" mnemonicParsing="false" onAction="#loginBtn_in_signup" prefHeight="39.0" prefWidth="150.0" styleClass="login-btn" stylesheets="@style.css" text="Login">
+                  <Button fx:id="login_in_su_form" layoutX="76.0" layoutY="450.0" mnemonicParsing="false" onAction="#loginBtn_in_signup" prefHeight="39.0" prefWidth="150.0" styleClass="login-btn" stylesheets="@style.css" text="Đăng nhập">
                      <font>
                         <Font size="21.0" />
                      </font>
@@ -34,22 +34,22 @@
             </AnchorPane>
             <AnchorPane layoutX="303.0" layoutY="5.0" prefHeight="539.0" prefWidth="522.0" stylesheets="@style.css">
                <children>
-                  <Label layoutX="155.0" layoutY="53.0" text="CREATE ACCOUNT" textFill="#01bfac">
+                  <Label layoutX="180.0" layoutY="52.0" text="Tạo tài khoản" textFill="#01bfac">
                      <font>
                         <Font size="27.0" />
                      </font>
                   </Label>
                   <TextField fx:id="su_email" layoutX="104.0" layoutY="210.0" prefHeight="45.0" prefWidth="325.0" promptText="Your email. . ." styleClass="raddius" stylesheets="@style.css" />
                   <PasswordField fx:id="su_pass" layoutX="104.0" layoutY="267.0" prefHeight="45.0" prefWidth="325.0" promptText="Password. . ." styleClass="raddius" stylesheets="@style.css" />
-                  <Button fx:id="su_btn" layoutX="189.0" layoutY="445.0" mnemonicParsing="false" onAction="#regBtn" prefHeight="45.0" prefWidth="150.0" styleClass="sign-up-btn" stylesheets="@style.css" text="Sign Up" textFill="WHITE">
+                  <Button fx:id="su_btn" layoutX="189.0" layoutY="445.0" mnemonicParsing="false" onAction="#regBtn" prefHeight="45.0" prefWidth="150.0" styleClass="sign-up-btn" stylesheets="@style.css" text="Đăng ký" textFill="WHITE">
                      <font>
                         <Font size="21.0" />
                      </font>
                   </Button>
-                  <Label layoutX="189.0" layoutY="161.0" text="or use your github for register" />
+                  <Label layoutX="180.0" layoutY="160.0" text="hoặc sử dụng github để đăng ký " />
                   <ImageView fitHeight="39.0" fitWidth="41.0" layoutX="244.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@git.jpg" />
+                        <Image url="@image/git.jpg" />
                      </image>
                   </ImageView>
                   <ComboBox fx:id="comboBox" layoutX="104.0" layoutY="323.0" onAction="#comboxChance" prefHeight="39.0" prefWidth="325.0" promptText="Question" styleClass="questionchoice" stylesheets="@style.css" />
@@ -73,38 +73,38 @@
                         <Font size="21.0" />
                      </font>
                   </Text>
-                  <Button fx:id="suBtn_loginform" layoutX="99.0" layoutY="416.0" mnemonicParsing="false" onAction="#suBtn_in_loginform" prefHeight="39.0" prefWidth="153.0" styleClass="login-btn" stylesheets="@style.css" text="Sign up" />
+                  <Button fx:id="suBtn_loginform" layoutX="99.0" layoutY="416.0" mnemonicParsing="false" onAction="#suBtn_in_loginform" prefHeight="39.0" prefWidth="153.0" styleClass="login-btn" stylesheets="@style.css" text="Đăng ký" />
                   <ComboBox fx:id="comboBox1" layoutX="212.0" layoutY="17.0" prefHeight="39.0" prefWidth="19.0" visible="false" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="login" prefHeight="534.0" prefWidth="501.0" styleClass="white-form" stylesheets="@style.css">
                <children>
-                  <Label layoutX="67.0" layoutY="71.0" text="Sign in to your database" textFill="#00ae9d">
+                  <Label layoutX="30.0" layoutY="71.0" text="Đăng nhập vào dữ liệu của bạn" textFill="#00ae9d">
                      <font>
                         <Font size="32.0" />
                      </font>
                   </Label>
                   <TextField fx:id="si_email" layoutX="99.0" layoutY="241.0" prefHeight="39.0" prefWidth="252.0" promptText=" Email. . . " styleClass="raddius" stylesheets="@style.css" />
-                  <Label layoutX="160.0" layoutY="348.0" onMouseClicked="#forgotBtn" styleClass="forgotpass" stylesheets="@style.css" text="Quên mật khẩu?" underline="true" />
-                  <Button fx:id="sign_in" layoutX="150.0" layoutY="423.0" mnemonicParsing="false" onAction="#loginBtn" prefHeight="39.0" prefWidth="153.0" styleClass="sign-up-btn" stylesheets="@style.css" text="Sign in" />
-                  <ImageView fitHeight="56.0" fitWidth="63.0" layoutX="194.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+                  <Label layoutX="185.0" layoutY="347.0" onMouseClicked="#forgotBtn" styleClass="forgotpass" stylesheets="@style.css" text="Quên mật khẩu?" underline="true" />
+                  <Button fx:id="sign_in" layoutX="150.0" layoutY="423.0" mnemonicParsing="false" onAction="#loginBtn" prefHeight="39.0" prefWidth="153.0" styleClass="sign-up-btn" stylesheets="@style.css" text="Đăng nhập" />
+                  <ImageView fitHeight="56.0" fitWidth="63.0" layoutX="205.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@git.jpg" />
+                        <Image url="@image/git.jpg" />
                      </image>
                   </ImageView>
-                  <Label layoutX="126.0" layoutY="202.0" text="or use your github for signin" />
+                  <Label layoutX="150.0" layoutY="202.0" text="hoặc sử dụng github để đăng nhập" />
                   <PasswordField fx:id="si_pass" layoutX="100.0" layoutY="294.0" prefHeight="39.0" prefWidth="252.0" promptText="Password. . ." styleClass="raddius" stylesheets="@style.css" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="forgotform" layoutX="6.0" prefHeight="539.0" prefWidth="461.0" stylesheets="@style.css" visible="false">
                <children>
-                  <Label layoutX="110.0" layoutY="79.0" text="Forgot password" textFill="#01bfac">
+                  <Label layoutX="110.0" layoutY="79.0" text="Quên mật khẩu" textFill="#01bfac">
                      <font>
                         <Font size="32.0" />
                      </font>
                   </Label>
                   <TextField fx:id="fg_email" layoutX="68.0" layoutY="215.0" prefHeight="45.0" prefWidth="325.0" promptText="Your email. . ." styleClass="raddius" stylesheets="@style.css" />
-                  <Button layoutX="154.0" layoutY="417.0" mnemonicParsing="false" onAction="#proceedBtn" prefHeight="45.0" prefWidth="150.0" styleClass="sign-up-btn" stylesheets="@style.css" text="Proceed" textFill="WHITE">
+                  <Button layoutX="154.0" layoutY="417.0" mnemonicParsing="false" onAction="#proceedBtn" prefHeight="45.0" prefWidth="150.0" styleClass="sign-up-btn" stylesheets="@style.css" text="Tiếp tục" textFill="WHITE">
                      <font>
                         <Font size="21.0" />
                      </font>
@@ -116,12 +116,12 @@
             </AnchorPane>
             <AnchorPane fx:id="newPass" layoutX="6.0" prefHeight="539.0" prefWidth="461.0" stylesheets="@style.css" visible="false">
                <children>
-                  <Label layoutX="110.0" layoutY="79.0" text="Forgot password" textFill="#01bfac">
+                  <Label layoutX="110.0" layoutY="79.0" text="Quên mật khẩu" textFill="#01bfac">
                      <font>
                         <Font size="32.0" />
                      </font>
                   </Label>
-                  <Button layoutX="125.0" layoutY="394.0" mnemonicParsing="false" onAction="#changePassBtn" prefHeight="45.0" prefWidth="211.0" styleClass="sign-up-btn" stylesheets="@style.css" text="Change Password" textFill="WHITE">
+                  <Button layoutX="125.0" layoutY="394.0" mnemonicParsing="false" onAction="#changePassBtn" prefHeight="45.0" prefWidth="211.0" styleClass="sign-up-btn" stylesheets="@style.css" text="Đổi mật khẩu" textFill="WHITE">
                      <font>
                         <Font size="21.0" />
                      </font>

@@ -19,7 +19,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
-
 public class Controller implements Initializable {
 
     @FXML
@@ -41,13 +40,10 @@ public class Controller implements Initializable {
     public ComboBox<?> comboBox;
     @FXML
     public ComboBox<?> comboBox2;
-    private String[] question = {"a","b"};
     private Alert alert;
     private Connection connect;
     private PreparedStatement prepare;
     private ResultSet result;
-//    @FXML
-//    private Button login_in_su_form;
     @FXML
     private AnchorPane login_form;
     @FXML
@@ -102,7 +98,7 @@ public class Controller implements Initializable {
     public void comboxChance() {
         List<String> listQ = new ArrayList<>();
 
-        for(String data : question)
+        for(String data : ListData.question)
         {
             listQ.add(data);
         }
@@ -138,6 +134,7 @@ public class Controller implements Initializable {
                      alert.setHeaderText(null);
                      alert.setContentText("Success!");
                      alert.showAndWait();
+                     ListData.temp_user = si_email.getText();
 
                      Parent root = FXMLLoader.load(Main.class.getResource("test.fxml"));
                      Stage stage = new Stage();

@@ -51,3 +51,6 @@
    -fx-size : 40px;
     -fx-text-fill: white;
 }
+.shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 5,0,0,0);
+}
